@@ -1,5 +1,5 @@
-name: znc-freyes
 summary: advanced modular IRC bouncer
+name: znc-albaguirre
 version: "1.6.6"
 description: |
  znc is an IRC proxy. It runs as a daemon and connects to IRC server,
