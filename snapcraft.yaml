@@ -52,3 +52,14 @@ parts:
     install: |
       mkdir -p $SNAPCRAFT_PART_INSTALL/usr/lib/znc
       mv push.so $SNAPCRAFT_PART_INSTALL/usr/lib/znc
+
+  znc-clientbuffer:
+    plugin: make
+    source: https://github.com/CyberShadow/znc-clientbuffer.git
+    after: [znc]
+    build: |
+      make
+    install: |
+      mkdir -p $SNAPCRAFT_PART_INSTALL/usr/lib/znc
+      mv clientbuffer.so $SNAPCRAFT_PART_INSTALL/usr/lib/znc
+
