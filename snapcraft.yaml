@@ -10,8 +10,13 @@ confinement: strict
 
 apps:
   znc:
-    command: znc
-    plugs: [network, network-bind, home]
+    command: znc --datadir $SNAP_COMMON --allow-root --foreground
+    plugs: [network, network-bind]
+    daemon: simple
+
+  make-config:
+     command: znc --datadir $SNAP_COMMON --makeconf --foreground --allow-root
+     plugs: [network, network-bind]
 
 parts:
   znc:
