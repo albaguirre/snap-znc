@@ -1,6 +1,6 @@
 name: znc-freyes
-version: "1.6.5"
 summary: advanced modular IRC bouncer
+version: "1.6.6"
 description: |
  znc is an IRC proxy. It runs as a daemon and connects to IRC server,
  then allows you to connect from a workstation and work as the user that
@@ -14,6 +14,7 @@ description: |
  interface with many plugins supporting other features.
 
 confinement: strict
+
 apps:
   znc:
     command: znc
@@ -23,7 +24,7 @@ parts:
   znc:
     plugin: autotools
     source: https://github.com/znc/znc.git
-    source-tag: znc-1.6.5
+    source-tag: znc-1.6.6
     configflags:
       - '--enable-python'
       - '--enable-perl'
