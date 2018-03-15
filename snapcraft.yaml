@@ -1,17 +1,9 @@
-summary: advanced modular IRC bouncer
 name: znc-albaguirre
 version: "1.6.6"
+summary: an advanced IRC bouncer
 description: |
- znc is an IRC proxy. It runs as a daemon and connects to IRC server,
- then allows you to connect from a workstation and work as the user that
- is logged in to the IRC server. After you disconnect, it maintains the
- connection to the server. It acts like any normal IRC server, so you can
- use any IRC client to connect to it.
- .
- Some of its features include support for multiple users, multiple clients,
- and multiple IRC servers; playback buffers to catch up with what happened
- while you were detached, SSL encryption, DCC proxying, and a plugin
- interface with many plugins supporting other features.
+ an advanced IRC bouncer that is left connected so an IRC client can
+ disconnect/reconnect without losing the chat session.
 
 confinement: strict
 
