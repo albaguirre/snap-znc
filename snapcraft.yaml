@@ -63,3 +63,13 @@ parts:
       mkdir -p $SNAPCRAFT_PART_INSTALL/usr/lib/znc
       mv clientbuffer.so $SNAPCRAFT_PART_INSTALL/usr/lib/znc
 
+  znc-playback:
+    plugin: make
+    source: https://github.com/jpnurmi/znc-playback.git
+    after: [znc]
+    build: |
+      znc-buildmod playback.cpp
+    install: |
+      mkdir -p $SNAPCRAFT_PART_INSTALL/usr/lib/znc
+      mv playback.so $SNAPCRAFT_PART_INSTALL/usr/lib/znc
+
