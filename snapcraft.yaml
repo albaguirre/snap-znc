@@ -39,7 +39,6 @@ parts:
       - libicu-dev
       - zlib1g-dev
     prepare: |
-      #!/bin/bash -ex
       patch -p1 < ../../../modules-dir-relative-snap-dir.patch
 
   znc-push:
