@@ -48,6 +48,7 @@ parts:
     build-packages:
       - ca-certificates
     build: |
-      #!/bin/bash -ex
-      env PATH="../../../parts/znc/install/usr/bin:$PATH" make
-      cp push.so ../../../stage/usr/share/znc/modules
+      make
+    install: |
+      mkdir -p $SNAPCRAFT_PART_INSTALL/usr/lib/znc
+      mv push.so $SNAPCRAFT_PART_INSTALL/usr/lib/znc
