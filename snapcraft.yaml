@@ -73,3 +73,11 @@ parts:
       mkdir -p $SNAPCRAFT_PART_INSTALL/usr/lib/znc
       mv playback.so $SNAPCRAFT_PART_INSTALL/usr/lib/znc
 
+  mutter-znc:
+    plugin: dump
+    source: https://bitbucket.org/jmclough/mutter-push/get/master.zip
+    organize:
+      '*/mutter.py': usr/lib/znc/mutter.py
+    prime:
+     - usr/lib/znc
+
